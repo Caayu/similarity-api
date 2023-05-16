@@ -13,11 +13,13 @@ const paragraphVariants = cva(
     },
     defaultVariants: {
       size: 'default',
-    },
+    }
   }
 )
 
-interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement>, VariantProps<typeof paragraphVariants> {}
+interface ParagraphProps
+  extends HTMLAttributes<HTMLParagraphElement>,
+    VariantProps<typeof paragraphVariants> {}
 
 const Paragraph = forwardRef<HTMLParagraphElement, ParagraphProps>(({
   className, size, children, ...props

@@ -7,9 +7,7 @@ import { ReactNode } from 'react'
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-      <SessionProvider>
-        {children}
-      </SessionProvider>
+      <SessionProvider>{children}</SessionProvider>
     </ThemeProvider>
   )
 }
